@@ -47,7 +47,7 @@ public class DataStore<T> where T : class,IEntity
 
     }
 
-    public IEnumerable<T>? GetAll(){
+    public IEnumerable<T> GetAll(){
         return new List<T>(Items.Values); 
     }
 

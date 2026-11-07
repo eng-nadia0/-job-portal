@@ -144,6 +144,26 @@ public class JobService
     }
 
 
+    public Job? GetJobById(int id)
+    {
+        var job=_jobDataStore.GetById(id);
+        if (job == null)return null;
+          
+          return job;
+    }
+
+    public IEnumerable<Job>? GetAllJobs()
+    {
+        var AllJobs = _jobDataStore.GetAll();
+        if (AllJobs == null)
+        {
+            Console.WriteLine("No Jobs found.");
+            return null;
+        }
+       return AllJobs;
+    } 
+
+
 
 
 }
